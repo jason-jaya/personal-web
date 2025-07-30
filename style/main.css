@@ -133,13 +133,13 @@
         position: fixed;
         bottom: 0;
         right: 0;
-        width: 400px;
-        height: 500px;
-        background: var(--gundam-gray);
-        clip-path: polygon(20% 100%, 80% 100%, 90% 80%, 85% 60%, 95% 40%, 90% 20%, 70% 10%, 50% 15%, 30% 10%, 10% 20%, 5% 40%, 15% 60%, 10% 80%);
-        opacity: 0.1;
+        width: 1030px;
+        height: auto;
+        opacity: 1;
         z-index: -1;
+        pointer-events: none;
     }
+
 
     /* Hero Section */
     .hero {
