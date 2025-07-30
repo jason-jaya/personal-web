@@ -31,6 +31,7 @@
     body.dark-mode {
         background-color: var(--deep-gray);
         color: var(--light-gray);
+        text-shadow: none;
     }
 
     /* Fixed Sidebar */
@@ -244,8 +245,14 @@
         color: var(--light-gray);
     }
 
-    .dark-mode .hero h1 {
+    .dark-mode .hero h1,
+    .dark-mode .hero p {
         color: var(--white);
+            text-shadow:
+            -1px -1px 0 #000000,
+            1px -1px 0 #000000,
+            -1px  1px 0 #000000,
+            1px  1px 0 #000000;
     }
 
     /* Projects Section - Mission Panel Display */
@@ -328,7 +335,8 @@
         letter-spacing: 1px;
     }
 
-    .dark-mode .mission-codename {
+    .dark-mode .mission-codename,
+    .dark-mode .mission-role {
         color: var(--light-gray);
     }
 
