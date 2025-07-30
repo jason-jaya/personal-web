@@ -160,6 +160,11 @@
         animation: slideInUp 1s ease-out;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         transform-origin: center;
+            text-shadow:
+        -1px -1px 0 #F4F1EC,
+         1px -1px 0 #F4F1EC,
+        -1px  1px 0 #F4F1EC,
+         1px  1px 0 #F4F1EC;
     }
 
     .hero h1.scroll-fade {
@@ -168,14 +173,20 @@
         transform: scale(0.95) translateY(-10px);
     }
 
-    .hero p {
-        font-size: 1.5rem;
-        font-weight: 300;
-        margin-bottom: 40px;
-        animation: slideInUp 1s ease-out 0.2s both;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        transform-origin: center;
-    }
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    animation: slideInUp 1s ease-out 0.2s both;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+    text-shadow:
+        -1px -1px 0 #F4F1EC,
+         1px -1px 0 #F4F1EC,
+        -1px  1px 0 #F4F1EC,
+         1px  1px 0 #F4F1EC;
+}
+
 
     .hero p.scroll-fade {
         opacity: 0 !important;
