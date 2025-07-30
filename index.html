@@ -1862,21 +1862,28 @@
         }
 
         // Enhanced smooth scrolling with active section tracking
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Update URL hash
-                history.pushState(null, null, `#${sectionId}`);
-                
-                // Update active nav link
-                updateActiveNavLink(sectionId);
-            }
+function scrollToSection(sectionId) {
+    if (sectionId === 'home') {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    } else {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
+    }
+
+    // Update URL hash
+    history.pushState(null, null, `#${sectionId}`);
+
+    // Update active nav link
+    updateActiveNavLink(sectionId);
+}
 
         // Update active navigation link
         function updateActiveNavLink(activeSection) {
