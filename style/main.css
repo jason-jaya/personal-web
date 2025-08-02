@@ -254,6 +254,11 @@
             -1px  1px 0 #000000,
             1px  1px 0 #000000;
     }
+    .gundam-bg.transition {
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
 
     /* Projects Section - Mission Panel Display */
     .projects-header {
@@ -919,20 +924,21 @@
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
-        .sidebar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform: none;
-            flex-direction: row;
-            justify-content: space-around;
-            background: var(--white);
-            padding: 20px 10px;
-            border-radius: 0;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
-            border-top: 2px solid var(--metallic-blue);
-        }
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(380px); /* Move it 10px further down */
+        flex-direction: row;
+        justify-content: space-around;
+        background: var(--white);
+        padding: 20px 10px;
+        border-radius: 0;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        border-top: 2px solid var(--metallic-blue);
+    }
+
 
         .dark-mode .sidebar {
             background: var(--gundam-gray);

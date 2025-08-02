@@ -635,20 +635,22 @@
         // Dark mode toggle
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
-
     const toggle = document.querySelector('.dark-mode-toggle');
-    const gundamImage = document.getElementById("gundamImage");
-
-    // Update the toggle icon
     toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 
-    // Swap the image based on current mode
-    if (document.body.classList.contains("dark-mode")) {
-        gundamImage.src = "assets/dark-gundam.png"; // dark version
-    } else {
-        gundamImage.src = "assets/gundam3.png"; // light version
-    }
+    const gundamImage = document.getElementById("gundamImage");
+    gundamImage.style.opacity = 0;
+
+    setTimeout(() => {
+        gundamImage.src = document.body.classList.contains('dark-mode')
+            ? 'assets/dark-gundam3.png'
+            : 'assets/gundam3.png';
+        gundamImage.onload = () => {
+            gundamImage.style.opacity = 1;
+        };
+    }, 200);
 }
+
 
 
         // Enhanced smooth scrolling with active section tracking
